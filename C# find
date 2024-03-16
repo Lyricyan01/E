@@ -1,0 +1,35 @@
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            DataTable DT = new DataTable();
+            String sqlstr;
+            sqlstr = "Data Source=DESKTOP-HD0E562;Initial Catalog=wy; User Id=sa, Password = ";
+            SqlConnection mysql = new SqlConnection(sqlstr);
+            mysql.Open();
+
+            SqlDataAdapter da = new SqlDataAdapter("select * from tblstaff1", mysql);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "staff");
+            dgStaff1.DataSource = null;
+            dgStaff1.DataSource = ds.Tables["staff"];
+
+            DT = ds.Tables["staff"];
+
+        }
+
+        void display()
+        {
+            String sqlstr;
+            sqlstr = "Data Source=DESKTOP-HD0E562;Initial Catalog=wy; User Id=sa, Password = ";
+            SqlConnection mysql = new SqlConnection(sqlstr);
+
+            DataTable DT = new DataTable();
+
+            SqlDataAdapter sda = new SqlDataAdapter ("SELECT * FROM tblStaff1 where Name LIKE'%" +txtfind.Text+"%'", mysql);
+            sda.Fill(DT);
+            dgStaff1.DataSource = DT;
+        }
+
+        private void txtfind_TextChange(object sender, EventArgs e)
+        {
+            display();
+        }

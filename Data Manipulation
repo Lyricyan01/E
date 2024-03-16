@@ -1,0 +1,17 @@
+Data manipulation
+	The DBMS must be able to handle requests to retrieve, update, or delete existing data in the database or to add new data to the database. In other words, the DBMS must include a DML processor or DML complier component to deal with the data manipulation language (DML).
+
+Optimization and execution
+	The DML requests, planned or unplanned, must be processed by the optimizer component, whose purpose is to determine and efficient way of implementing the request.
+
+Data security and integrity
+	The DBMS, or some subsystem involved by the DBMS, must monitor user requests and reject any attempt to violate the security and integrity constraints defined by the DBA.
+
+Data recovery and concurrency
+	The DBMS or more likely, another related software component called the transaction manager or TP monitor _ must enforce certain recovery and concurrency controls.
+
+Data dictionary
+	The DBMS must provide a data dictionary function. The data dictionary can be regarded as a database in its own right , it contains data about the data. That is, definitions of other objects in the system, instead of just raw data. In particular, all of the various schemas and mappings and all of the various security and integrity constraints will be kept, in both source and object form, in the dictionary. A comprehensive dictionary will also include much additional information showing, for instance, which programs use which parts of the database, which users require which reports, and so on.
+
+Performance
+	It goes without saying that the DBMS should perform all of its takes as efficiently as possible.

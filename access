@@ -1,0 +1,22 @@
+1.
+Select Picture * 
+From Picture inner join Location on Picture.Location = Location.Location
+Where Country in ('Egypt','England')
+Group by Location;
+
+2.
+Select People * 
+From Picture inner join People on Picture.PictureNo = People.PictureNo
+Where not Person = 'Carol', Picture.Date between '1/1/23' and '1/31/23';
+
+3.
+Select Location.Location,Location.City, Location.Country, People.Person
+From People inner join Location on People.Location = Location.Location
+Where People.PictureNo = '005';
+
+4.
+Select Count(PictureNo) AS Total number of pictures, Sum(Location)
+From Picture
+Order by Date;
+
+5.

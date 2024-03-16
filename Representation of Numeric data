@@ -1,0 +1,22 @@
+Representation of numeric data
+
+The numeric field might be stored in internal arithmetic form as a character string. Either way, the DBA must choose whether to use fixed or floating point, what base or radix to use what the precision should be, and if fixed point what the scale factor should be.
+
+Representation of character data
+	The character string field must be stored using any of serval distinct code character set, for example ASCII, EBCDIC or unicode.
+
+Unit for numeric data
+	The units in a numeric field must changed  from inches to centimeter for example during a process of metrication.
+
+Data coding
+	In some situations, it must be desirable to represent in storage by code values.
+
+Data materialization
+	In practice the logical field seen by an application usually does correspond directly to some specific stored field. If it does, the process of materialization, that is constructing an occurrence of logical field from the corresponding stored field occurrence and presenting it to the application, is said to be direct.
+
+Structure of stored records
+	Two existing stored records might be combined into one. A single stored record type must be split into two. 
+	The implication is that a given application’s logical record might contain field from serval distinct stored records, that is migh be a proper superset of any given one of those stored records.
+
+Structure of stored files
+	A given stored file can be physically implemented in storage in a wide variety of ways. For example, it might be entirely contained within a single storage volume or it might be spread across serval volumes (possibly on serval different device types).

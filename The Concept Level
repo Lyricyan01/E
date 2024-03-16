@@ -1,0 +1,18 @@
+The Conceptual Level
+
+    The conceptual view is a representation of the entire information content of the database, 
+again in a form that is somewhat abstract in comparison with the way in which the data is physically stored. 
+It will also be quite different, in general, from the way in which the data is viewed by any particular user.
+    The conceptual view is consists of many types of conceptual record. For example, it might consist of a collection of 
+department record occurrences, plus a collection of employee record occurrences, plus a collection of supplier record occurrences, 
+plus a collection of part record occurrences, and so on. A conceptual record is not necessarily the same as either an external record,
+on the one hand, or a stored record, on the other.
+    The conceptual view is defined by means of the conceptual schema, which includes definitions of each of the various conceptual record
+types. The conceptual schema is written using another data definition language, the conceptual DDL. If physical data independence is 
+to be achieved, then those conceptual DDL definitions must not involve any considerations of physical representation or access 
+technique at all – they must be definitions of information content only. Thus, there must be no reference in the conceptual schema 
+to stored field representation, stored record sequence, indexes, hashing schemes, pointers, or any other storage and access details.
+    The conceptual view, is a view of the total database content, and the conceptual schema is a definition of that view. The ultimate 
+objective of the conceptual schema is to describe the complete enterprise, how that data is used: how it flows from point to point 
+within the enterprise, what it is used for at each point, what audit or other controls are to be applied at each point, and so on [2.3]. 
+The conceptual schema is little more than a simple union of all of the individual external schemas, plus certain security and integrity constraints. But it is certainly possible that systems of the future will be much more sophisticated in their support of the conceptual level.
